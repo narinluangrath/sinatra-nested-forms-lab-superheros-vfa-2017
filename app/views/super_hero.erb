@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <header>
+  </header>
 
+  <body>
+
+    <h1> Create a Team and Heroes! </h1>
+
+    <form method='post' action='/teams'>
+      Team Name: <input type='text' id='team[name]' name='team[name]'></input> <br>
+      Team Motto: <input type='text' id='team[motto]' name='team[motto]'></input>
+
+    <h2> Hero 1 </h2>
+      Hero Name: <input type='text' id='member1_name' name='team[members][][name]'></input> <br>
+      Hero Power: <input type='text' id='member1_power' name='team[members][][power]'></input> <br>
+      Hero Bio: <input type='text' id='member1_bio' name='team[members][][bio]'></input> <br>
+
+    <h2> Hero 2 </h2>
+      Hero Name: <input type='text' id='member2_name' name='team[members][][name]'></input> <br>
+      Hero Power: <input type='text' id='member2_power' name='team[members][][power]'></input> <br>
+      Hero Bio: <input type='text' id='member2_bio' name='team[members][][bio]'></input> <br>
+
+    <h2> Hero 3 </h2>
+      Hero Name: <input type='text' id='member3_name' name='team[members][][name]'></input> <br>
+      Hero Power: <input type='text' id='member3_power' name='team[members][][power]'></input> <br>
+      Hero Bio: <input type='text' id='member3_bio' name='team[members][][bio]'></input> <br>
+
+    <input type='submit' value='submit'>
+
+    </form>
+  </body>
+</html>
+
+
+<!-- describe 'GET /' do
+  before do
+    get '/'
+  end
+
+  it 'sends a 200 status code' do
+    expect(last_response.status).to eq(200)
+  end
+
+  it 'renders super hero form' do
+    expect(last_response.body).to include("Create a Team and Heroes!")
+    expect(last_response.body).to include("<form")
+  end
+end -->

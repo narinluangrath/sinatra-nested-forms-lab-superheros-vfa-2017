@@ -1,3 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <header>
+  </header>
+
+  <body>
+    <h1> <%= @team.name %> </h1>
+    <h2> <%= "Team Motto: #{@team.motto}!" %> </h2>
+
+    <% @heros.each do |hero| %>
+      <h2> <%= "Hero Name: #{hero.name}!" %> </h2>
+      <p> <%= "Hero Power: #{hero.power}!" %> </p>
+      <p> <%= "Hero Biography: #{hero.bio}!" %> </p>
+    <% end %>
+
+    <input type='submit' value='Submit'>
+
+    </form>
+  </body>
+</html>
 
 
-
+<!--
+  expect(page).to have_text("Team Ruby")
+  expect(page).to have_text("Team Motto: We love Ruby!")
+  expect(page).to have_text("Hero Name: Amanda")
+  expect(page).to have_text("Hero Power: Ruby")
+  expect(page).to have_text("Hero Biography: I love Ruby!")
+  expect(page).to have_text("Hero Name: Arel")
+  expect(page).to have_text("Hero Power: JavaScript")
+  expect(page).to have_text("Hero Biography: I love JavaScript!")
+  expect(page).to have_text("Hero Name: Katie")
+  expect(page).to have_text("Hero Power: Sinatra")
+  expect(page).to have_text("Hero Biography: I love Sinatra!") -->
